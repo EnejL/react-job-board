@@ -15,7 +15,6 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,4 +34,22 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* job listing styling */
+
+.JobListings {
+  display: flex;
+  flex-direction: column;
+}
+
+.JobListing {
+  max-width: 90vw;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 2px 0 #82786f33;
+  border-radius: 6px;
+  padding: 30px;
+  margin: 0 auto 25px auto;
+  border: 1px solid #eee;
 }
