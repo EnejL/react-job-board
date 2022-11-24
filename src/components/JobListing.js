@@ -1,14 +1,27 @@
 import React from 'react';
-import logo from "../logo.svg";
+import linkIcon from '../images/external-link.png';
 
-function JobListing() {
-    const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-    const listItems = numbers.map((number) =>
-        <li className="JobListing">This is a job listing</li>
-    );
-
+function JobListing(props) {
     return (
-        <ul className="JobListings">{listItems}</ul>
+        <ul className="JobListing">
+            <a href={props.jobLink} className="JobLink" target="_blank">
+                <h4 className="JobTitle">
+                    {props.jobTitle}
+                </h4>
+                <div className="JobInformation">
+                    <p className="CompanyName">
+                        {props.companyName}
+                    </p>
+                    <p className="JobLocation">
+                        {props.jobLocation}
+                    </p>
+                    <img src={linkIcon} className="LinkIcon" />
+                </div>
+                <span className="DatePosted">
+                    {props.datePosted}
+                </span>
+            </a>
+        </ul>
     );
 }
 
