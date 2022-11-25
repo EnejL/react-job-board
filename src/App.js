@@ -1,10 +1,10 @@
-// importing components
-import './components/JobListing';
+// imports
+import Header from './components/Header';
+import Search from './components/Search';
+import JobListing from './components/JobListing';
+import Pagination from './components/Pagination';
+import Footer from './components/Footer';
 
-// importing assets
-import './styles/App.css';
-import logo from './logo.svg';
-import JobListing from "./components/JobListing";
 import jobs from "./data"
 
 function App() {
@@ -23,17 +23,15 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Header
-        </p>
-      </header>
+        <Header />
         <main>
+            <Search />
             <ul className="JobListings">
                 {jobPost}
             </ul>
+            <Pagination />
         </main>
+        <Footer />
     </div>
   );
 }
